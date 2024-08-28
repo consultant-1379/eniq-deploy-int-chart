@@ -1,0 +1,17 @@
+dependencies:
+- condition: eric-oss-eniq-test.enabled
+  name: eric-oss-eniq-test
+  repository: https://arm.seli.gic.ericsson.se/artifactory/proj-eniq-drop-helm/
+  version: 1.0.0-26
+- condition: eric-data-search-engine.enabled
+  name: eric-data-search-engine
+  repository: https://arm.sero.gic.ericsson.se/artifactory/proj-adp-gs-all-helm/
+  version: 6.1.0+66
+- condition: eric-log-transformer.enabled
+  name: eric-log-transformer
+  repository: https://arm.sero.gic.ericsson.se/artifactory/proj-adp-gs-all-helm/
+  version: 5.4.0+33
+- condition: eric-log-shipper.enabled
+  name: eric-log-shipper
+  repository: https://arm.sero.gic.ericsson.se/artifactory/proj-adp-gs-all-helm/
+  version: 5.1.0+25

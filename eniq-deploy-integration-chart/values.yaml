@@ -1,0 +1,27 @@
+global:
+  security:
+    tls:
+      enabled: false
+eric-data-search-engine:
+  persistence:
+    data:
+      persistentVolumeClaim:
+      storageClassName: network-block
+eric-log-shipper:
+  logshipper:
+    autodiscover:
+      enabled: true
+      namespace: ".RELEASE.NAMESPACE"
+      logplane: app_logs
+eric-log-transformer:
+  searchengine:
+    logplaneConfig:
+    - field: "[facility]"
+      value: "log audit"
+      newLogplane: "app_logs"
+  config:
+    adpJson:
+      validation:
+        enabled: false
+      transformation:
+        enabled: true
